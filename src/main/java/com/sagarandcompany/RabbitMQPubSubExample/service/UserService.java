@@ -1,7 +1,7 @@
 package com.sagarandcompany.RabbitMQPubSubExample.service;
 
 import com.sagarandcompany.RabbitMQPubSubExample.RabbitMqPubSubExampleApplication;
-import com.sagarandcompany.RabbitMQPubSubExample.listener.ProductMessageListener;
+import com.sagarandcompany.RabbitMQPubSubExample.listener.UserMessageListener;
 import com.sagarandcompany.RabbitMQPubSubExample.model.User;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class UserService {
     @Autowired
     private RabbitTemplate rabbitTemplate;
     @Autowired
-    ProductMessageListener productMessageListener;
+    UserMessageListener productMessageListener;
 
     public void publish(User user) {
         Map<String, User> actionmap = new HashMap<>();

@@ -1,6 +1,6 @@
 package com.sagarandcompany.RabbitMQPubSubExample;
 
-import com.sagarandcompany.RabbitMQPubSubExample.listener.ProductMessageListener;
+import com.sagarandcompany.RabbitMQPubSubExample.listener.UserMessageListener;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
@@ -42,7 +42,7 @@ public class RabbitMqPubSubExampleApplication {
     }
 
     @Bean
-    MessageListenerAdapter listenerAdapter(ProductMessageListener receiver) {
+    MessageListenerAdapter listenerAdapter(UserMessageListener receiver) {
         return new MessageListenerAdapter(receiver, "receiveMessage");
     }
 

@@ -12,9 +12,9 @@ import java.util.Map;
  * message as the parameter.
  */
 @Component
-public class ProductMessageListener {
+public class UserMessageListener {
 
-    private static final Logger log = LogManager.getLogger(ProductMessageListener.class);
+    private static final Logger log = LogManager.getLogger(UserMessageListener.class);
     private Map<String, User> map = null;
 
     public void receiveMessage(Map<String, User> message) {
