@@ -3,6 +3,9 @@ https://www.sagarandcompany.com/
 
 
 # This is Example of RabbitMQ Pub Sub Example using Spring Boot
+
+
+
 # Configuration:=>
 ```java
 public class RabbitMqPubSubExampleApplication {
@@ -89,4 +92,17 @@ public class UserMessageListener {
     }
 }
 
+```
+# Basic Questions about RabbitMQ
+
+```java
+Q: What is RabbitMQ ?
+A:RabbitMQ is an open source message broker software (sometimes called message-oriented middleware) that implements the Advanced Message Queuing Protocol (AMQP). The RabbitMQ server is written in the Erlang programming language and is built on the Open Telecom Platform framework for clustering and failover.
+
+Q: What is an exchange in RabbitMQ?
+A: An exchange accepts messages from the producer application and routes them to message queues with help of header attributes, bindings, and routing keys. A binding is a "link" that you set up to bind a queue to an exchange.
+Q: What is routing key in RabbitMQ?
+A: The routing key is a message attribute. The routing algorithm behind a direct exchange is simple - a message goes to the queues whose binding key exactly matches the routing key of the message. 
+Q: What is Erlang ? Why is it required for RabbitMQ ?
+A: Erlang is a general-purpose, concurrent, functional programming language, as well as a garbage-collected runtime system. The RabbitMQ server is written in the Erlang programming language and is built on the Open Telecom Platform framework for clustering and failover. Since RabbitMQ is built on top of Erlang, we will first need to install Erlang beforing installing RabbitMQ
 ```
