@@ -34,7 +34,7 @@ public class RabbitMqPubSubExampleApplication {
     }
 
     @Bean
-    MessageListenerAdapter listenerAdapter(ProductMessageListener receiver) {
+    MessageListenerAdapter listenerAdapter(UserMessageListener receiver) {
         return new MessageListenerAdapter(receiver, "receiveMessage");
     }
 
